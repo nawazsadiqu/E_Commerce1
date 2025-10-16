@@ -8,7 +8,7 @@ const Waterbased = () => {
 
   const fetchProducts = () => {
     axios
-      .get("http://localhost:3001/getProducts")
+      .get("https://e-commerce-03kf.onrender.com/getProducts")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Error fetching products:", err));
   };
@@ -20,7 +20,7 @@ const Waterbased = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
-        await axios.delete(`http://localhost:3001/deleteProduct/${id}`);
+        await axios.delete(`https://e-commerce-03kf.onrender.com/deleteProduct/${id}`);
         fetchProducts(); 
       } catch (err) {
         console.error("Error deleting product:", err);

@@ -9,7 +9,7 @@ const AllOrders = () => {
   // Fetch all orders (admin view)
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/getAllOrders");
+      const res = await axios.get("https://e-commerce-03kf.onrender.com/getAllOrders");
       setOrders(res.data);
     } catch (err) {
       console.error("❌ Error fetching orders:", err);
@@ -27,7 +27,7 @@ const AllOrders = () => {
   const updateStatus = async (orderId, newStatus) => {
     try {
       const res = await axios.put(
-        `http://localhost:3001/updateOrderStatus/${orderId}`,
+        `https://e-commerce-03kf.onrender.com/updateOrderStatus/${orderId}`,
         { status: newStatus }
       );
       setOrders((prev) =>

@@ -45,7 +45,7 @@ const Createwater = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:3001/getCategories")
+    axios.get("https://e-commerce-03kf.onrender.com/getCategories")
     .then(result => setdropdown(result.data))
     .catch(err => console.log(err)
     )
@@ -56,7 +56,7 @@ const Createwater = () => {
 
   const submit1 = (e) => {
     e.preventDefault()
-    axios.post("http://localhost:3001/createProduct", { 
+    axios.post("https://e-commerce-03kf.onrender.com/createProduct", { 
       name, category, flavor, price, description, image 
     }) 
       .then(result => {

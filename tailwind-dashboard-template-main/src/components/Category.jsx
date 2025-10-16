@@ -7,7 +7,7 @@ const Category = () => {
   const navigate = useNavigate();
 
   const fetchCategories = () => {
-    axios.get("http://localhost:3001/getCategories")
+    axios.get("https://e-commerce-03kf.onrender.com/getCategories")
       .then((res) => setCategories(res.data))
       .catch((err) => console.error(err));
   };
@@ -18,7 +18,7 @@ const Category = () => {
 
   const handleDelete = (id) => {
     if (window.confirm("Delete this category?")) {
-      axios.delete(`http://localhost:3001/deleteCategory/${id}`)
+      axios.delete(`https://e-commerce-03kf.onrender.com/deleteCategory/${id}`)
         .then(() => fetchCategories())
         .catch((err) => console.error(err));
     }

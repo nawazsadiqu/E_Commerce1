@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3001/register", form);
+      const res = await axios.post("https://e-commerce-03kf.onrender.com/register", form);
       alert(res.data.message);
 
       // ✅ Navigate to login page after successful registration

@@ -25,7 +25,7 @@ const Profile = () => {
 
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/getUser/${userId}`, {
+        const res = await axios.get(`https://e-commerce-03kf.onrender.com/getUser/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data);
@@ -48,7 +48,7 @@ const Profile = () => {
 
     const fetchOrders = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/getOrders/${userName}`);
+        const res = await axios.get(`https://e-commerce-03kf.onrender.com/getOrders/${userName}`);
         setOrders(res.data);
       } catch (err) {
         console.error("Error fetching orders:", err);
@@ -89,7 +89,7 @@ const Profile = () => {
 
     try {
       setDeleting(true);
-      await axios.delete(`http://localhost:3001/deleteUser/${userId}`, {
+      await axios.delete(`https://e-commerce-03kf.onrender.com/deleteUser/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

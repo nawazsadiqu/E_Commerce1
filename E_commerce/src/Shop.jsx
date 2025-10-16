@@ -16,7 +16,7 @@ const Shop = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/getProducts");
+      const res = await axios.get("https://e-commerce-03kf.onrender.com/getProducts");
       setProducts(res.data);
     } catch (err) {
       console.error(err);
@@ -27,7 +27,7 @@ const Shop = () => {
     const user = localStorage.getItem("userName");
     if (!user) return;
     try {
-      const res = await axios.get(`http://localhost:3001/getWishlist/${user}`);
+      const res = await axios.get(`https://e-commerce-03kf.onrender.com/getWishlist/${user}`);
       setWishlistItems(res.data.items.map((i) => i.product));
     } catch (err) {
       console.error(err);
@@ -39,7 +39,7 @@ const Shop = () => {
     if (!user) return alert("⚠ Please login first");
 
     try {
-      await axios.post("http://localhost:3001/addToCart", {
+      await axios.post("https://e-commerce-03kf.onrender.com/addToCart", {
         user,
         productId: product._id,
         name: product.name,
@@ -60,12 +60,12 @@ const Shop = () => {
     try {
       if (wishlistItems.includes(product._id)) {
         await axios.delete(
-          `http://localhost:3001/removeFromWishlist/${user}/${product._id}`
+          `https://e-commerce-03kf.onrender.com/removeFromWishlist/${user}/${product._id}`
         );
         setWishlistItems(wishlistItems.filter((id) => id !== product._id));
         alert("💔 Removed from wishlist!");
       } else {
-        await axios.post("http://localhost:3001/addToWishlist", {
+        await axios.post("https://e-commerce-03kf.onrender.com/addToWishlist", {
           user,
           productId: product._id,
           name: product.name,

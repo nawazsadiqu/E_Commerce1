@@ -19,7 +19,7 @@ const EditProduct = () => {
   // Fetch product details
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/getProduct/${id}`)
+      .get(`https://e-commerce-03kf.onrender.com/getProduct/${id}`)
       .then((res) => setProductData(res.data))
       .catch((err) => console.log(err));
   }, [id]);
@@ -59,7 +59,7 @@ const EditProduct = () => {
     if (loading) return alert("Please wait for the image to finish uploading.");
 
     axios
-      .put(`http://localhost:3001/updateProduct/${id}`, productData)
+      .put(`https://e-commerce-03kf.onrender.com/updateProduct/${id}`, productData)
       .then(() => navigate("/water"))
       .catch((err) => console.log(err));
   };

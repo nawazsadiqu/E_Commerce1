@@ -10,7 +10,7 @@ const CategoryCards = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getCategories")
+      .get("https://e-commerce-03kf.onrender.com/getCategories")
       .then((res) => setCategories(res.data))
       .catch((err) => console.error("Error fetching categories:", err));
   }, []);

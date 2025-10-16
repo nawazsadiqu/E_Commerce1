@@ -13,7 +13,7 @@ const Cart = () => {
   const fetchCart = async () => {
     if (!user) return;
     try {
-      const res = await axios.get(`http://localhost:3001/getCart/${user}`);
+      const res = await axios.get(`https://e-commerce-03kf.onrender.com/getCart/${user}`);
       setCartItems(res.data.items || []);
     } catch (err) {
       console.error(err);
@@ -30,7 +30,7 @@ const Cart = () => {
     if (!user) return;
     try {
       const res = await axios.delete(
-        `http://localhost:3001/removeFromCart/${user}/${productId}`
+        `https://e-commerce-03kf.onrender.com/removeFromCart/${user}/${productId}`
       );
       setCartItems(res.data.cart.items || []);
     } catch (err) {
@@ -44,7 +44,7 @@ const Cart = () => {
     if (!user || newQuantity < 1) return;
     try {
       const res = await axios.put(
-        `http://localhost:3001/updateCart/${user}/${productId}`,
+        `https://e-commerce-03kf.onrender.com/updateCart/${user}/${productId}`,
         { quantity: newQuantity }
       );
       setCartItems(res.data.cart.items || []);
@@ -174,7 +174,7 @@ const CheckoutForm = ({ cartItems, total, user, onClose, onOrderPlaced }) => {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:3001/createOrder", {
+      const res = await axios.post("https://e-commerce-03kf.onrender.com/createOrder", {
         user,
         items: cartItems,
         totalAmount: total,

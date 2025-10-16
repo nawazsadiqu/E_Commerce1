@@ -11,7 +11,7 @@ const Wishlist = () => {
     if (!user) return;
 
     axios
-      .get(`http://localhost:3001/getWishlist/${user}`)
+      .get(`https://e-commerce-03kf.onrender.com/getWishlist/${user}`)
       .then((res) => {
         setWishlist(res.data.items || []);
         setLoading(false);
@@ -25,7 +25,7 @@ const Wishlist = () => {
   const handleRemove = async (productId) => {
     try {
       await axios.delete(
-        `http://localhost:3001/removeFromWishlist/${user}/${productId}`
+        `https://e-commerce-03kf.onrender.com/removeFromWishlist/${user}/${productId}`
       );
       setWishlist((prev) => prev.filter((item) => item.product !== productId));
       alert("💔 Item removed from wishlist");
@@ -37,7 +37,7 @@ const Wishlist = () => {
 
   const handleAddToCart = async (item) => {
     try {
-      const res = await axios.post("http://localhost:3001/addToCart", {
+      const res = await axios.post("https://e-commerce-03kf.onrender.com/addToCart", {
         user,
         productId: item.product,
         name: item.name,

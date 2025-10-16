@@ -11,7 +11,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3001/login", form);
+      const res = await axios.post("https://e-commerce-03kf.onrender.com/login", form);
       alert(res.data.message);
 
       // Store token, userId, and userName in localStorage

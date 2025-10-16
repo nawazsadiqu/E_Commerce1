@@ -11,7 +11,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/getProduct/${id}`)
+      .get(`https://e-commerce-03kf.onrender.com/getProduct/${id}`)
       .then((res) => {
         setProduct(res.data);
         setLoading(false);
@@ -30,7 +30,7 @@ const ProductDetail = () => {
     if (!user) return alert("⚠ Please login first");
 
     try {
-      const res = await axios.post("http://localhost:3001/addToCart", {
+      const res = await axios.post("https://e-commerce-03kf.onrender.com/addToCart", {
         user,
         productId: product._id,
         name: product.name,
@@ -56,7 +56,7 @@ const ProductDetail = () => {
 
     try {
       if (!wishlist) {
-        const res = await axios.post("http://localhost:3001/addToWishlist", {
+        const res = await axios.post("https://e-commerce-03kf.onrender.com/addToWishlist", {
           user,
           productId: product._id,
           name: product.name,
@@ -66,7 +66,7 @@ const ProductDetail = () => {
         if (res.status === 200) alert("💖 Added to wishlist!");
       } else {
         await axios.delete(
-          `http://localhost:3001/removeFromWishlist/${user}/${product._id}`
+          `https://e-commerce-03kf.onrender.com/removeFromWishlist/${user}/${product._id}`
         );
         alert("💔 Removed from wishlist!");
       }

@@ -35,7 +35,7 @@ const Createcategory = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3001/createCategory", { name, description, image })
+    axios.post("https://e-commerce-03kf.onrender.com/createCategory", { name, description, image })
       .then((e) =>{
         console.log(e);
         
