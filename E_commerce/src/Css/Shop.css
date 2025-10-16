@@ -1,0 +1,45 @@
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.eye-icon {
+  color: #fff;
+  font-size: 28px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+/* 👇 only the image section reacts to hover */
+.card-img-wrapper:hover img {
+  filter: brightness(0.6);
+  transform: scale(1.05);
+}
+
+.card-img-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.card-img-wrapper:hover .eye-icon {
+  opacity: 1;
+  transform: scale(1);
+}

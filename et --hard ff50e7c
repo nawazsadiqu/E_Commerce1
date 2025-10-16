@@ -1,0 +1,11 @@
+[33mcfc9df0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: commit: Ignore node_modules folders
+[33m1fb6230[m HEAD@{1}: commit: Removed git-filter-repo folder
+[33mb7e3d27[m HEAD@{2}: commit: Removed nested git repository from tracking
+[33mff50e7c[m HEAD@{3}: rebase (abort): returning to refs/heads/main
+[33m52ccb70[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{4}: pull origin main --rebase (start): checkout 52ccb70c93c666a719209fbb3fef334d5c89911f
+[33mff50e7c[m HEAD@{5}: Branch: renamed refs/heads/main to refs/heads/main
+[33mff50e7c[m HEAD@{7}: commit: Removed .env file and added to .gitignore
+[33m183a95d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{8}: Branch: renamed refs/heads/nawaz123 to refs/heads/main
+[33m183a95d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{10}: checkout: moving from master to nawaz123
+[33m183a95d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{11}: Branch: renamed refs/heads/master to refs/heads/master
+[33m183a95d[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{13}: commit (initial): this is trial

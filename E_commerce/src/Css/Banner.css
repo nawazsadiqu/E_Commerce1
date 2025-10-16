@@ -1,0 +1,61 @@
+.bg-carousel {
+  position: relative;
+  z-index: 0; 
+  margin-top: -97px;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  
+}
+
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 60px;
+}
+
+.welcome h5 {
+  font-family: 'Instrument Sans', sans-serif;
+  letter-spacing: 3px;
+}
+
+.welcome h1 {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 6px;
+  margin-top: 30px;
+  color: white;
+  text-shadow: 2px 0 5px rgb(16, 1, 46);
+}
+
+.head-highlight {
+  color: #FFD700;
+  text-shadow: 2px 0 5px rgb(0,0,0);
+}
+
+.welcome button {
+  margin-top: 30px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3527f7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.welcome button:hover {
+  transform: scale(1.05);
+  color: black;
+  background-color: #e6c200;
+}

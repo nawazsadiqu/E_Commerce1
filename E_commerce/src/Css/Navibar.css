@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+/* ---------------------------- */
+/* General Layout */
+/* ---------------------------- */
+.carousel-container {
+  position: relative;
+  min-height: 30vh;
+  overflow: hidden;
+}
+
+/* ---------------------------- */
+/* Navbar Base Styling */
+/* ---------------------------- */
+.navbar-on-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation for initial slide-in */
+.navbar-slide {
+  animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ---------------------------- */
+/* Navbar Links */
+/* ---------------------------- */
+.nav-link {
+  color: white !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.2);
+  color: #000000 !important;
+}
+
+/* ---------------------------- */
+/* Responsive Adjustments */
+/* ---------------------------- */
+@media (max-width: 992px) {
+  /* Navbar collapses into dropdown */
+  .navbar-on-carousel {
+    position: fixed;
+    background-color: white !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-collapse {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  /* Links center-aligned on mobile */
+  .navbar .nav-link {
+    text-align: center;
+    color: #000 !important;
+    padding: 10px 0;
+  }
+
+  .navbar .nav-link:hover {
+    color: #ff4081 !important;
+  }
+
+  /* Brand logo resizing */
+  .navbar-brand img {
+    width: 110px;
+    height: auto;
+  }
+}
+
+/* ---------------------------- */
+/* Utility Classes */
+/* ---------------------------- */
+.text-white {
+  color: #fff !important;
+}
+
+.text-dark {
+  color: #000 !important;
+}
