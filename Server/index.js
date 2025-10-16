@@ -20,7 +20,7 @@ const OrderModel = require("./Models/Order");
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174" ,"https://e-commerce1-drab-ten.vercel.app/"],
+    origin: ["https://e-commerce1-drab-ten.vercel.app", "http://localhost:5174"],
     credentials: true,
   })
 );
